@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_KEY = process.env.AIzaSyCg7eKVMJC5HLLXXnHWiIp-1Q0_wmW9fwY;
 
 app.post('/chat', async (req, res) => {
   try {
@@ -14,7 +14,7 @@ app.post('/chat', async (req, res) => {
     }));
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${AIzaSyCg7eKVMJC5HLLXXnHWiIp-1Q0_wmW9fwY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
